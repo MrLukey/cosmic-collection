@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.34)
-# Database: lukes_cosmic_events
-# Generation Time: 2021-08-02 10:53:24 +0000
+# Database: cosmic_collector
+# Generation Time: 2021-08-02 14:14:21 +0000
 # ************************************************************
 
 
@@ -29,9 +29,10 @@ DROP TABLE IF EXISTS `cosmic_events`;
 CREATE TABLE `cosmic_events` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) NOT NULL DEFAULT '',
-  `caused_by` varchar(120) DEFAULT '',
+  `caused_by` varchar(120) NOT NULL DEFAULT '',
   `creates_effect` varchar(120) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `cosmic_events` WRITE;
@@ -41,10 +42,10 @@ INSERT INTO `cosmic_events` (`id`, `name`, `caused_by`, `creates_effect`)
 VALUES
 	(1,'Big Bang','Unknown','Fusion'),
 	(2,'Cosmic Rays','Big Bang','Fission'),
-	(3,'Massive Stars','Gravity','New Elements'),
-	(4,'Low Mass Stars','Gravity','New Elements'),
-	(5,'Merging Neutron Stars','Gravity','New Elements'),
-	(6,'White Dwarf Stars','Gravity','New Elements');
+	(3,'Exploding Massive Stars','Gravity','Supernova'),
+	(4,'Dying Low Mass Stars','Gravity','Plantery Nebula'),
+	(5,'Merging Neutron Stars','Gravity','Black Hole'),
+	(6,'Exploding White Dwarfs','Gravity','Type 1A Supernova');
 
 /*!40000 ALTER TABLE `cosmic_events` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -59,7 +60,9 @@ CREATE TABLE `elements` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(120) NOT NULL DEFAULT '',
   `atomic_mass` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `atomic_mass` (`atomic_mass`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `elements` WRITE;
