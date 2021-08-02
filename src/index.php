@@ -7,7 +7,6 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $cosmic_event_query = $db->prepare('SELECT * FROM `cosmic_events`;');
 $cosmic_event_query->execute();
 $cosmic_events = $cosmic_event_query->fetchAll();
-print_r($cosmic_events[0]);
 
 echo '<div class="cosmic_events">';
 foreach ($cosmic_events as $event) {
