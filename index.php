@@ -1,8 +1,8 @@
 <?php
 require 'functions.php';
 
-echo '<link rel="stylesheet" type="text/css" href="cosmic_collector.css">';
-$db = new PDO('mysql:host=db; dbname=lukes_cosmic_events', 'root', 'password');
+echo produce_HTML_Head();
+$db = new PDO('mysql:host=db; dbname=cosmic_collector', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $cosmic_event_query = $db->prepare('SELECT * FROM `cosmic_events`;');
 $cosmic_event_query->execute();
