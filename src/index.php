@@ -1,18 +1,29 @@
 <?php
 require 'functions.php';
+require 'db_functions.php';
 
-echo produce_HTML_Head();
-$db = new PDO('mysql:host=db; dbname=cosmic_collector', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$cosmic_event_query = $db->prepare('SELECT * FROM `cosmic_events`;');
-$cosmic_event_query->execute();
-$cosmic_events = $cosmic_event_query->fetchAll();
-
-echo '<div class="cosmic_events">';
+$db = create_PDO();
+$cosmic_events = extract_Cosmic_Events($db);
+$elements_produced = [];
 foreach ($cosmic_events as $event) {
-	echo display_Cosmic_Event($event);
+    $event_elements = extract_Event_Elements($db, $event);
+    $elements_produced[$event['name']] = format_Event_Elements($event_elements);
 }
-echo '</div>';
+?>
 
-//print_r($cosmic_event);
-//display_Cosmic_Event($cosmic_events);
+<html lang="en-gb">
+<head>
+	<meta charset="utf-8">
+	<title>Cosmic Collector</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="cosmic_collector.css">
+</head>
+<body>
+	<div class="cosmic_events">
+		<?php
+		foreach ($cosmic_events as $event) {
+			echo display_Cosmic_Event($event, $elements_produced[$event['name']]);
+		}?>
+	</div>
+</body>
+</html>
