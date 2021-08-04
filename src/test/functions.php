@@ -31,9 +31,20 @@ class Functions extends TestCase
 		$this->assertEquals($expected_output, $actual_output);
 	}
 
-	public function test_malformed_display_cosmic_event() {
+	public function test_malformed_display_cosmic_event_2() {
 		$db_row_input = 1;
 		$event_elements = [1, 2, 5, 7];
+		$this->expectException(TypeError::class);
+		$output = display_cosmic_event($db_row_input, $event_elements);
+	}
+
+	public function test_malformed_display_cosmic_event() {
+		$db_row_input = [
+			'id' => 1,
+			'name' => 'Big Bang',
+			'caused_by' => 'Unknown',
+			'creates_effect' => 'Fusion'];
+		$event_elements = 1;
 		$this->expectException(TypeError::class);
 		$output = display_cosmic_event($db_row_input, $event_elements);
 	}
