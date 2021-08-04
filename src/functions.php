@@ -3,7 +3,6 @@
 function format_event_elements(array $elements): array {
 	$elements_produced = [];
 	foreach ($elements as $element){
-		//print_r($element);
 		if (array_key_exists('name', $element)) $elements_produced[] = $element['name'];
 		else return ['FAIL'];
 	}

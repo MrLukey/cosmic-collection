@@ -2,7 +2,7 @@
 
 require '../functions.php';
 
-use PHPUnit\Framework\TestCase; // magic to get PHPUnit testing to work (lookup)
+use PHPUnit\Framework\TestCase;
 
 class Functions extends TestCase
 {

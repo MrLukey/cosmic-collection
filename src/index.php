@@ -4,7 +4,7 @@ require 'db_functions.php';
 
 $db = new PDO('mysql:host=db; dbname=cosmic_collector', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$cosmic_events = extract_Cosmic_Events($db);
+$cosmic_events = extract_cosmic_events($db);
 $elements_produced = [];
 foreach ($cosmic_events as $event) {
     $event_elements = extract_event_elements($db, $event);
