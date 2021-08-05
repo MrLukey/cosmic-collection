@@ -8,7 +8,6 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $all_elements_assoc = extract_all_elements($db);
 $all_elements = format_event_elements($all_elements_assoc);
-
 $display_string = '';
 
 if (isset($_POST['cosmic_event'])){
