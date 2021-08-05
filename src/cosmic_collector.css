@@ -3,21 +3,22 @@
     border: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: black;
+    color: lightgrey;
+    background-color: black;
+    font-size: 16px;
 }
 
 nav {
     display: flex;
     justify-content: flex-start;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     position: sticky;
     top: 0;
-    background-color: white;
 }
 
 h1 {
     text-align: center;
-    font-size: 100px;
+    font-size: 64px;
 }
 
 h2 {
@@ -37,7 +38,7 @@ a {
     max-width: 500px;
     min-width: 200px;
     margin: 0 50px 0 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 25px;
     padding: 10px;
 }
@@ -49,7 +50,7 @@ a {
 
 .event_input {
     margin: 0 10px 10px 10px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .p_element {
@@ -57,7 +58,7 @@ a {
     align-items: center;
     margin: 1px;
     padding: 2px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .p_element, .element_input, .element_label {
@@ -95,17 +96,26 @@ a {
 }
 
 .cosmic_event {
-    width: 300px;
+    width: 400px;
     height: 100%;
     margin: 10px;
-    padding: 5px;
-    border: 1px solid black;
+    padding: 15px;
+    border: 1px solid white;
     border-radius: 50px;
-    text-align: center;
+    text-align: left;
 }
 
 .insert_message {
     text-align: center;
     font-size: 24px;
     margin: 10px 0;
+}
+
+p {
+    color: darkgrey;
+}
+
+span {
+    font-size: 18px;
+    color: white;
 }

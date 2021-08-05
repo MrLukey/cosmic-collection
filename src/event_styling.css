@@ -1,0 +1,44 @@
+.picture {
+    width: 300px;
+    height: 240px;
+    margin: 10px auto 0 auto;
+    padding: 10px 50px 10px 50px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.big_bang {
+    background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F929796842%2FDo-you-understand-enough-about-the-Big-Bang-theory-to-challenge-it-%2F960x0.jpg");
+}
+
+.cosmic_rays {
+    background-image: url("https://miro.medium.com/max/1155/1*ql3vwpoudDHYTuCaQN_7Vw.png");
+}
+
+.massive_stars {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/800px-Crab_Nebula.jpg");
+}
+
+.low_mass_stars {
+    background-image: url("https://mk0astronomynow9oh6g.kinstacdn.com/wp-content/uploads/2016/10/red_dwarf_exoplanets_1200x900.jpg");
+}
+
+.neutron_stars {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Eso1733s_Artist%27s_impression_of_merging_neutron_stars.jpg/1280px-Eso1733s_Artist%27s_impression_of_merging_neutron_stars.jpg");
+}
+
+.white_dwarfs {
+    background-image: url("https://www.universetoday.com/wp-content/uploads/2020/02/55705c1969bedded798e9229.jpg");
+}
+
+.bio_life {
+    background-image: url("https://infusionassociates.com/wp-content/uploads/2020/05/What-is-Biological-Therapy.jpg");
+}
+
+.synth_life {
+    background-image: url("https://miro.medium.com/max/1200/1*_HqzhQqC8E4gs_-YeZsd5w.jpeg");
+}
+
+.default {
+    background-image: url("https://wallpaperaccess.com/full/1963222.jpg");
+}

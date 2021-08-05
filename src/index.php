@@ -18,6 +18,7 @@ foreach ($cosmic_events as $event) {
 	<title>Cosmic Collector</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="cosmic_collector.css">
+    <link rel="stylesheet" type="text/css" href="event_styling.css">
 </head>
 <body>
 <nav>
@@ -27,7 +28,8 @@ foreach ($cosmic_events as $event) {
 <div class="cosmic_events">
     <?php
     foreach ($cosmic_events as $event) {
-        echo display_cosmic_event($event, $elements_produced[$event['name']]);
+        $class = generate_html_class($event['name']);
+        echo display_cosmic_event($event, $elements_produced[$event['name']], $class);
     }?>
 </div>
 </body>
