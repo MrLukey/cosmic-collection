@@ -2,7 +2,70 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: black;
 }
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+a {
+    margin: 10px;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 500px;
+    min-width: 200px;
+    margin: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+
+.collectable_form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 0 10px 10px 10px;
+    border: 1px solid black;
+}
+
+label {
+    margin: 0 10px 0 10px;
+    text-align: left;
+}
+
+.submit {
+    max-width: 100px;
+    border: 2px solid green;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 25px;
+}
+
 
 .cosmic_events {
     display: flex;
@@ -18,5 +81,4 @@
     border: 1px solid black;
     border-radius: 50px;
     text-align: center;
-
 }
