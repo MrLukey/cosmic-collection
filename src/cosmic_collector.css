@@ -54,19 +54,23 @@ a {
 }
 
 .p_element {
-    width: 125px;
-    align-items: center;
-    margin: 1px;
-    padding: 2px;
-    border: 1px solid white;
+    display: flex;
+    align-items: baseline;
+    width: 130px;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid grey;
+    border-radius: 10px;
 }
 
-.p_element, .element_input, .element_label {
+.element_input, .element_label {
     display: inline-block;
 }
 
 .element_label {
-    padding-left: 10px;
+    color: lightgrey;
+    margin: 2px;
+    padding: 3px 10px 3px 3px;
 }
 
 .elements_checkbox {
