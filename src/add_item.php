@@ -8,7 +8,6 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $all_elements_assoc = extract_all_elements($db);
 $all_elements = format_event_elements($all_elements_assoc);
-
 $display_string = '';
 
 if (isset($_POST['cosmic_event'])){
@@ -68,7 +67,7 @@ if (isset($_POST['cosmic_event'])){
         <label for="creates_effect" class="event_label">Enter Effect:</label>
 		<input type="text" name="creates_effect" id="creates_effect" class="event_input"
                placeholder="e.g New Elements" required>
-        <input type="submit" class="submit">
+        <input type="submit" class="submit" value="Submit">
         <div class="elements_checkbox">
             <?php foreach ($all_elements as $element){
                 echo create_element_checkbox($element);
