@@ -74,4 +74,19 @@ class Functions extends TestCase
 		$this->expectException(TypeError::class);
 		$output = format_event_elements($input);
 	}
+
+	public function test_success_create_element_checkbox() {
+		$input = 'Hydrogen';
+		$expected_output = '<div class="p_element"><input type="checkbox" class="element_input" name="Hydrogen" id="'
+			. 'Hydrogen"><label class="element_label" for="Hydrogen">Hydrogen</label></div>';
+		$actual_output = create_element_checkbox($input);
+		$this->assertEquals($expected_output, $actual_output);
+	}
+
+	public function test_malformed_create_element_checkbox() {
+		$input = [1, 2, 3];
+		$this->expectException(TypeError::class);
+		$output = create_element_checkbox($input);
+	}
+
 }

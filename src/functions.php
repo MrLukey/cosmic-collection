@@ -20,3 +20,8 @@ function display_cosmic_event(array $db_row, array $event_elements): string {
 	}
 	return $html . '</p></div>';
 }
+
+function create_element_checkbox(string $element): string {
+	return '<div class="p_element"><input type="checkbox" class="element_input" name="' . $element . '" id="'
+		. $element . '"><label class="element_label" for="' . $element . '">' . $element . '</label></div>';
+}
