@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.cosmic_events {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.cosmic_event {
+    width: 300px;
+    height: 100%;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+
+}
