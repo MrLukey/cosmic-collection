@@ -31,16 +31,15 @@ a {
     font-size: 30px;
 }
 
-form {
+.input_form {
     display: flex;
     flex-flow: column nowrap;
     max-width: 500px;
     min-width: 200px;
-    margin: 50px;
+    margin: 0 50px 0 50px;
     border: 1px solid black;
     border-radius: 25px;
     padding: 10px;
-
 }
 
 .collectable_form {
@@ -48,12 +47,34 @@ form {
     justify-content: center;
 }
 
-input {
+.event_input {
     margin: 0 10px 10px 10px;
     border: 1px solid black;
 }
 
-label {
+.p_element {
+    width: 125px;
+    align-items: center;
+    margin: 1px;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.p_element, .element_input, .element_label {
+    display: inline-block;
+}
+
+.element_label {
+    padding-left: 10px;
+}
+
+.elements_checkbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.event_label {
     margin: 0 10px 0 10px;
     text-align: left;
 }
@@ -81,4 +102,10 @@ label {
     border: 1px solid black;
     border-radius: 50px;
     text-align: center;
+}
+
+.insert_message {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
 }
