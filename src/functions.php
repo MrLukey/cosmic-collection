@@ -14,9 +14,13 @@ function display_cosmic_event(array $db_row, array $event_elements): string {
 		!array_key_exists('creates_effect', $db_row))
 		return 'FAIL';
 	$html = '<div class="cosmic_event"><h2>' . $db_row['name'] . '</h2><h3>Caused by: ' . $db_row['caused_by']
-		. '</h3><h3>Creates: ' . $db_row['creates_effect'] . '</h3><h3>Produces:</h3><p>';
-	foreach ($event_elements as $element){
-		$html .= $element . ', ';
+		. '</h3><h3>Creates: ' . $db_row['creates_effect'] . '</h3><h3 class="produces">Produces:</h3><p>';
+	if (count($event_elements) > 0){
+		$last_element = array_pop($event_elements);
+		foreach ($event_elements as $element){
+			$html .= $element . ', ';
+		}
+		$html .= $last_element;
 	}
 	return $html . '</p></div>';
 }
