@@ -43,7 +43,6 @@ if (isset($_POST['cosmic_event'])){
 <head>
 	<meta charset="utf-8">
 	<title>Cosmic Collector</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="cosmic_collector.css">
 </head>
 <body>
