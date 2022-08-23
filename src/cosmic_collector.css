@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: lightgrey;
+    background-color: black;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 64px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+a {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.input_form {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 500px;
+    min-width: 200px;
+    margin: 0 50px 0 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.collectable_form {
+    display: flex;
+    justify-content: center;
+}
+
+.event_input {
+    margin: 0 10px 10px 10px;
+    border: 1px solid white;
+}
+
+.p_element {
+    display: flex;
+    align-items: baseline;
+    width: 130px;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.element_input, .element_label {
+    display: inline-block;
+}
+
+.element_label {
+    color: lightgrey;
+    margin: 2px;
+    padding: 3px 10px 3px 3px;
+}
+
+.elements_checkbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.event_label {
+    margin: 0 10px 0 10px;
+    text-align: left;
+}
+
+.submit {
+    max-width: 100px;
+    border: 2px solid green;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 25px;
+}
+
+
+.cosmic_events {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.cosmic_event {
+    width: 400px;
+    height: 100%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-align: left;
+}
+
+.insert_message {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    color: darkgrey;
+}
+
+span {
+    font-size: 18px;
+    color: white;
+}
